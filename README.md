@@ -1,2 +1,2 @@
-# Summarizer
-A tool that finds the most important information in a passage and finds external links to help students study.
+# Summarizer (tentative title)
+An app that processes captured image of a textbook page to summarize the information, provide various other relevant information, and outline the info.
