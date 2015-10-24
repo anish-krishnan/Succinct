@@ -1,43 +1,73 @@
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+import com.squareup.okhttp.*;
+import java.util.concurrent.TimeUnit;
+import org.json.simple.*;
 public class CheggTester{
-  String [] relatedBooks;
-  public CheggTester(String bookName){
-    textBook = bookName;
+  static String [] relatedBooks;
+
+  public static void main(String [] args){
+    String test = "American Pagent";
+    System.out.println("CURRENT ID: " + textToID(test));
+    System.out.println("Testing with: " + test);
+    run(test);
+    /*for(int i=0; i<relatedBooks.length; i++){
+      System.out.println(relatedBooks[i]);
+    }
+    */
   }
 
-  public run(String textBook){
-      textBookID = textToID(textBook);
-      int listLength  = findSimilar(textBookID);
-      String [] myIDList = new String [listlength];
+  public static void run(String textBook){
+      String textBookID = textToID(textBook);
+      int listLength  = findSimilar(textBookID).length;
+      String [] myIDList = new String [listLength];
+      myIDList = findSimilar(textBookID);
+      relatedBooks = new String [listLength];
       for(int i=0; i<listLength; i++){
         relatedBooks [i] = IDtoName(myIDList[i]);
+        System.out.println("BOOK " + i+1 + ": " + relatedBooks[i]);
+        System.out.println("ID " + i+1 + ": " + myIDList[i]);
       }
+
   }
 
-  public String textToID(){
+  public static String textToID(String bookName){
     String ID = "";
 
     OkHttpClient client = new OkHttpClient();
+    client.setConnectTimeout(1000, TimeUnit.SECONDS);
+    client.setReadTimeout(1000, TimeUnit.SECONDS);
 
     Request request = new Request.Builder()
-      .url("https://hackingedu.chegg.com/hacking-edu/search?q=" + textToSearch)
+      .url("https://hackingedu.chegg.com/hacking-edu/search?q=" + bookName)
       .get()
       .addHeader("accept", "application/json")
       .addHeader("authorization", "Basic TXlPYUhWOUFtN01QdmxuSmJVVVV2SXZyaVBnYmVlQUE6MG1zQVFWbk1wemNS MXNjNA==")
       .addHeader("cache-control", "no-cache")
-      .addHeader("postman-token", "46e822fd-4a38-3db0-b60b-4bb26491f121")
+      //.addHeader("postman-token", "46e822fd-4a38-3db0-b60b-4bb26491f121")
       .build();
+      Response response = null;
+      String fullResponse = "";
+      try{
+        response = client.newCall(request).execute();
+        fullResponse = response.body().string();
+        System.out.println(fullResponse);
+      }catch(Exception e){
+        System.out.println(e);
+      }
 
-    Response response = client.newCall(request).execute();
 
-    String myResponse = response.result[0].responseContent.docs[0];
-    ID = myResponse.id;
-    return ID;
-
-
+  //  ID = response.result[0].responseContent.docs[0].id;
+    String finalID = fullResponse.substring(fullResponse.indexOf("LBP"), fullResponse.indexOf("LBP") +12);
+    System.out.println(fullResponse.substring(fullResponse.indexOf("LBP"), fullResponse.indexOf("LBP") +12));
+    return finalID;
 
   }
 
-  public void findSimilar(idToGetRelated){
+
+
+  public static String [] findSimilar(String idToGetRelated){
     String IDofRelated = "";
     OkHttpClient client = new OkHttpClient();
 
@@ -48,21 +78,46 @@ public class CheggTester{
   .addHeader("content-type", "application/json")
   .addHeader("authorization", "Basic TXlPYUhWOUFtN01QdmxuSmJVVVV2SXZyaVBnYmVlQUE6MG1zQVFWbk1wemNS MXNjNA==")
   .addHeader("cache-control", "no-cache")
-  .addHeader("postman-token", "2b21d3c9-023b-519e-4681-a7e20281879e")
+  //.addHeader("postman-token", "2b21d3c9-023b-519e-4681-a7e20281879e")
   .build();
 
-  Response response = client.newCall(request).execute();
-  String myResponse = response.result[0].responseContent.docs[0];
-  IDofRelated = myResponse.id;
-  String [] IDlist = new String [response.result.length];
-    for(int i=0; i<response.result.length; i++){
-      IDlist [i] = response.result[i].responseContent.docs[0].id;
-    }
-    return IDList;
+  Response response =null;
+
+  try{
+    response = client.newCall(request).execute();
+    System.out.println(response.toString());
+  }catch(Exception e){
+    System.out.println(e);
+  }
+  String myResponse = "";
+  try{
+    myResponse = response.body().string();
+  }catch(Exception e){
+    System.out.println(e);
+  }
+  System.out.println("MY RESPONSE " + myResponse);
+
+  /*JSONObject jObject = new JSONObject(new String(myResponse));
+  JSONArray jArray = jObject.getJSONArray("result");*/
+
+  Object obj = JSONValue.parse(myResponse);
+  JSONArray array=(JSONArray)obj;
+  System.out.println("ARRAY: " + array.toString());
+  String [] IDlist = new String [array.size()];
+  for(int i=0; i< array.size(); i++){
+    IDlist [i] = (String)((JSONObject)array.get(i)).get("catalogItemIdTo");
+  }
+  // IDofRelated = myResponse;
+
+  // String [] IDlist = new String [response.result.length];
+  //   for(int i=0; i<response.result.length; i++){
+  //     IDlist [i] = response.result[i].responseContent.docs[0].id;
+  //   }
+    return IDlist;
   }
 
-  public void IDtoName(String idToBeConverted){
-      String textBookTitle = "";
+  public static String IDtoName(String idToBeConverted){
+    String textBookTitle = "";
 
     OkHttpClient client = new OkHttpClient();
 
@@ -76,9 +131,31 @@ public class CheggTester{
   .addHeader("postman-token", "1cfc968c-0021-3d99-4dc7-e674d33db19c")
   .build();
 
-  Response response = client.newCall(request).execute();
+  // Response response = client.newCall(request).execute();
 
-  textBookTitle = response.title;
-  return textBookTitle;
+  Response response =null;
 
+  try{
+    response = client.newCall(request).execute();
+    System.out.println(response.toString());
+  }catch(Exception e){
+    System.out.println(e);
   }
+  String myResponse = "";
+  try{
+    myResponse = response.body().string();
+  }catch(Exception e){
+    System.out.println(e);
+  }
+  System.out.println("MY RESPONSE " + myResponse);
+  Object obj = JSONValue.parse(myResponse);
+  JSONObject object=(JSONObject)obj;
+  System.out.println("IDtoText: " + object.toString());
+  textBookTitle = (String)(object.get("title"));
+
+
+  //textBookTitle = response.title;
+  return textBookTitle;
+  }
+
+}
