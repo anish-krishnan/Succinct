@@ -8,7 +8,7 @@ public class CheggTester{
   static String [] relatedBooks;
 
   public static void main(String [] args){
-    String test = "American Pagent";
+    String test = "Math";
     System.out.println("CURRENT ID: " + textToID(test));
     System.out.println("Testing with: " + test);
     run(test);
@@ -26,8 +26,8 @@ public class CheggTester{
       relatedBooks = new String [listLength];
       for(int i=0; i<listLength; i++){
         relatedBooks [i] = IDtoName(myIDList[i]);
-        System.out.println("BOOK " + i+1 + ": " + relatedBooks[i]);
-        System.out.println("ID " + i+1 + ": " + myIDList[i]);
+        System.out.println("BOOK " + i + ": " + relatedBooks[i]);
+        System.out.println("ID " + i + ": " + myIDList[i]);
       }
 
   }
@@ -52,7 +52,7 @@ public class CheggTester{
       try{
         response = client.newCall(request).execute();
         fullResponse = response.body().string();
-        System.out.println(fullResponse);
+        //System.out.println(fullResponse);
       }catch(Exception e){
         System.out.println(e);
       }
@@ -85,7 +85,7 @@ public class CheggTester{
 
   try{
     response = client.newCall(request).execute();
-    System.out.println(response.toString());
+    //System.out.println(response.toString());
   }catch(Exception e){
     System.out.println(e);
   }
@@ -95,14 +95,14 @@ public class CheggTester{
   }catch(Exception e){
     System.out.println(e);
   }
-  System.out.println("MY RESPONSE " + myResponse);
+  //System.out.println("MY RESPONSE " + myResponse);
 
   /*JSONObject jObject = new JSONObject(new String(myResponse));
   JSONArray jArray = jObject.getJSONArray("result");*/
 
   Object obj = JSONValue.parse(myResponse);
   JSONArray array=(JSONArray)obj;
-  System.out.println("ARRAY: " + array.toString());
+  //System.out.println("ARRAY: " + array.toString());
   String [] IDlist = new String [array.size()];
   for(int i=0; i< array.size(); i++){
     IDlist [i] = (String)((JSONObject)array.get(i)).get("catalogItemIdTo");
@@ -137,7 +137,7 @@ public class CheggTester{
 
   try{
     response = client.newCall(request).execute();
-    System.out.println(response.toString());
+    //System.out.println(response.toString());
   }catch(Exception e){
     System.out.println(e);
   }
@@ -147,10 +147,10 @@ public class CheggTester{
   }catch(Exception e){
     System.out.println(e);
   }
-  System.out.println("MY RESPONSE " + myResponse);
+  //System.out.println("MY RESPONSE " + myResponse);
   Object obj = JSONValue.parse(myResponse);
   JSONObject object=(JSONObject)obj;
-  System.out.println("IDtoText: " + object.toString());
+  //System.out.println("IDtoText: " + object.toString());
   textBookTitle = (String)(object.get("title"));
 
 
