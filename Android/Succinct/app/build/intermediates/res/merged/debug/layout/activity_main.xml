@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OCRActivity"
+                android:background="@drawable/bgimage2">
+    
+    <Button
+        android:id="@+id/bt_gallery"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:singleLine="false"
+        android:background="@drawable/gallery"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/nextButton"
+        android:layout_toStartOf="@+id/nextButton"
+        android:layout_marginTop="5dp"></Button>
+
+    <Button
+        android:id="@+id/bt_camera"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/camera"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/nextButton"
+        android:layout_toEndOf="@+id/nextButton"
+        android:layout_marginTop="5dp"/>
+    
+    <TextView
+        android:id = "@+id/tv_result"
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/bt_gallery"
+        android:textIsSelectable="true"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autoText="false"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"/>
+    
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_below="@id/tv_result"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next!"
+        android:id="@+id/nextButton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"/>
+
+</RelativeLayout>
+<!-- From: file:/Users/Anirudh/AndroidStudioProjects/Tess2/app/src/main/res/layout/activity_main.xml -->

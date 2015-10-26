@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/okio-1.4.0-56fdb909a73e74d44c0405442e99596b3fb1b905.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9a125766af53bf65ff073bd76d98af65b8e492b2.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-9a19c66571671cbbbabcd049449beabe11c68f27.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/json-simple-1.1.1.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="5d6f9b6a9ddca2a28c0216cc44efb2e20d9c23b5">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/json-simple-1.1.1-4a958ddda9c0d8902bd289d859ae058258e4c518.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9a125766af53bf65ff073bd76d98af65b8e492b2.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="7a4ecfae9f4b637acb47ef2d18cbc74e91135454">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/classes-2d1dca34964b1dfdd0a98c269ff30f1a8efab8be.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/gson-2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/gson-2.4-eee8f4c032019564cca566fe7ec170fee2a5d241.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/json-simple-1.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5d6f9b6a9ddca2a28c0216cc44efb2e20d9c23b5">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/json-simple-1.1.1-4a958ddda9c0d8902bd289d859ae058258e4c518.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-9a19c66571671cbbbabcd049449beabe11c68f27.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/okio-1.4.0-56fdb909a73e74d44c0405442e99596b3fb1b905.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/gson-2.4.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/gson-2.4-eee8f4c032019564cca566fe7ec170fee2a5d241.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/libs/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7a4ecfae9f4b637acb47ef2d18cbc74e91135454">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/classes-2d1dca34964b1dfdd0a98c269ff30f1a8efab8be.jar" />
+    </item>
+    <item
+        jar="/Applications/AndroidSS/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-26469da37c4ebd311b532f402979fb4a3996e2c2.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/classes-dd09f929bdadb828c5368b85024297f6be87ef34.jar" />
+    </item>
+    <item
+        jar="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/classes-dd09f929bdadb828c5368b85024297f6be87ef34.jar" />
+    </item>
+    <item
+        jar="/Applications/AndroidSS/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Anirudh/AndroidStudioProjects/Tess2/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-26469da37c4ebd311b532f402979fb4a3996e2c2.jar" />
+    </item>
+
+</items>
